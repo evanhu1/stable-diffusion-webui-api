@@ -1,6 +1,7 @@
 GitPython
 Pillow
 accelerate
+insightface==0.7.3
 
 blendmodes
 clean-fid

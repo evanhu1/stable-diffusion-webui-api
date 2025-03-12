@@ -28,6 +28,7 @@ spandrel==0.3.4
 spandrel-extra-arches==0.1.1
 tomesd==0.1.3
 torch
+insightface==0.7.3
 torchdiffeq==0.2.3
 torchsde==0.2.6
 transformers==4.30.2
