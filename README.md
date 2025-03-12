@@ -10,6 +10,8 @@ sudo aws s3 sync s3://infradeps/auto1111/ ./
 
 ### Install the right ONNX runtime
 ```bash
+source venv/bin/activate
+sudo chmod -R  777 .
 pip install onnxruntime-gpu==1.17.1 --extra-index-url https://aiinfra.pkgs.visualstudio.com/PublicPackages/_packaging/onnxruntime-cuda-12/pypi/simple/
 ```
 

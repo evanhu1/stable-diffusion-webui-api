@@ -6,7 +6,6 @@
 
 SCRIPT_DIR=$( cd -- "$( dirname -- "${BASH_SOURCE[0]}" )" &> /dev/null && pwd )
 
-
 # If run from macOS, load defaults from webui-macos-env.sh
 if [[ "$OSTYPE" == "darwin"* ]]; then
     if [[ -f "$SCRIPT_DIR"/webui-macos-env.sh ]]
@@ -38,7 +37,7 @@ fi
 # Name of the subdirectory (defaults to stable-diffusion-webui)
 if [[ -z "${clone_dir}" ]]
 then
-    clone_dir="stable-diffusion-webui"
+    clone_dir="stable-diffusion-webui-api"
 fi
 
 # python3 executable
@@ -117,14 +116,14 @@ then
     exit 1
 fi
 
-if [[ -d "$SCRIPT_DIR/.git" ]]
-then
+# if [[ -d "$SCRIPT_DIR/.git" ]]
+# then
     printf "\n%s\n" "${delimiter}"
     printf "Repo already cloned, using it as install directory"
     printf "\n%s\n" "${delimiter}"
     install_dir="${SCRIPT_DIR}/../"
     clone_dir="${SCRIPT_DIR##*/}"
-fi
+# fi
 
 # Check prerequisites
 gpu_info=$(lspci 2>/dev/null | grep -E "VGA|Display")
